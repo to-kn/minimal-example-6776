@@ -1,0 +1,48 @@
+{
+  "name": "minimal-example",
+  "version": "1.0.0",
+  "description": "Minimal example for graphql-tools issue 6776",
+  "license": "ISC",
+  "author": "Tobias Knipping",
+  "main": "index.ts",
+  "scripts": {
+    "build": "kcd-scripts build --no-ts-defs --source-maps --no-clean",
+    "lint": "kcd-scripts lint",
+    "typecheck": "kcd-scripts typecheck",
+    "validate": "kcd-scripts validate",
+    "watch": "kcd-scripts build --no-ts-defs --source-maps --watch --skip-initial-build --no-clean"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "camelcase": [
+        "error",
+        {
+          "ignoreDestructuring": true,
+          "ignoreImports": true,
+          "properties": "never",
+          "ignoreGlobals": true
+        }
+      ],
+      "import/no-default-export": "error"
+    }
+  },
+  "dependencies": {
+    "@graphql-tools/merge": "9.0.14",
+    "@graphql-tools/schema": "10.0.13",
+    "@graphql-tools/utils": "10.6.4",
+    "uuid": "11.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/utils": "8.18.0",
+
+    "kcd-scripts": "16.0.0",
+    "prettier": "3.4.2",
+
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": "^20 || ^22"
+  },
+  "engineStrict": true
+}

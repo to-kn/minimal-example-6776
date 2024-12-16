@@ -1,0 +1,27 @@
+/dist/
+/coverage/
+node_modules/
+tmp/
+.idea/
+.DS_Store
+*.iml
+.npmrc
+yarn-error.log
+
+/.env.local
+/.env.test
+
+/.npmrc
+
+/conf/
+/data/
+/import/
+/logs/
+
+# symlink to schema for phpstorm graphql plugin configuration
+schema.graphql
+# phpstorm graphql plugin configuration
+graphql.config.yml
+
+# Sentry Config File
+.sentryclirc
